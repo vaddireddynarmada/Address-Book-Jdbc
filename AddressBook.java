@@ -56,6 +56,14 @@ public class AddressBook {
             System.out.println(contact);
         }
     }
+    public void countCity(Connection connection) throws SQLException {
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery("select count(*) from AddressBook group by city");
+    while (resultSet.next()){
+        int count = resultSet.getInt(1);
+        System.out.println(count);
+    }
+    }
 }
 
 
