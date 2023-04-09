@@ -1,33 +1,27 @@
 package org.example;
 
 public class Contacts {
+    private int ID;
     private String FIRST_NAME;
     private String LAST_NAME;
     private String ADDRESS;
     private String CITY;
     private String STATE;
     private int zip;
-    private int PHONE_NUMBER;
+    private double PHONE_NUMBER;
     private String EMAIL_ID;
     private String BOOK_NAME;
     private String BOOK_TYPE;
 
     public Contacts() {
-
     }
 
-    public Contacts(String FIRST_NAME, String LAST_NAME, String ADDRESS, String CITY, String STATE, int zip,
-                    int PHONE_NUMBER, String EMAIL_ID, String BOOK_NAME, String BOOK_TYPE) {
-        this.FIRST_NAME = FIRST_NAME;
-        this.LAST_NAME = LAST_NAME;
-        this.ADDRESS = ADDRESS;
-        this.CITY = CITY;
-        this.STATE = STATE;
-        this.zip = zip;
-        this.PHONE_NUMBER = PHONE_NUMBER;
-        this.EMAIL_ID = EMAIL_ID;
-        this.BOOK_NAME = BOOK_NAME;
-        this.BOOK_TYPE = BOOK_TYPE;
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public String getFIRST_NAME() {
@@ -78,11 +72,11 @@ public class Contacts {
         this.zip = zip;
     }
 
-    public int getPHONE_NUMBER() {
+    public double getPHONE_NUMBER() {
         return PHONE_NUMBER;
     }
 
-    public void setPHONE_NUMBER(int PHONE_NUMBER) {
+    public void setPHONE_NUMBER(double PHONE_NUMBER) {
         this.PHONE_NUMBER = PHONE_NUMBER;
     }
 
@@ -113,7 +107,8 @@ public class Contacts {
     @Override
     public String toString() {
         return "Contacts{" +
-                "FIRST_NAME='" + FIRST_NAME + '\'' +
+                "ID=" + ID +
+                ", FIRST_NAME='" + FIRST_NAME + '\'' +
                 ", LAST_NAME='" + LAST_NAME + '\'' +
                 ", ADDRESS='" + ADDRESS + '\'' +
                 ", CITY='" + CITY + '\'' +
